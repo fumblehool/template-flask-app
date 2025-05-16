@@ -5,8 +5,8 @@ import os
 def make_celery():
     return Celery(
         'tasks',
-        broker= os.environ.get("VALKEY_DB_URL", default="redis://localhost:6379/0"),
-        backend=os.environ.get("VALKEY_DB_URL", default="redis://localhost:6379/0"),
+        broker= os.environ.get("VALKEY_DB_URL", default="redis://localhost:6379/0") + "?ssl_cert_reqs=none",
+        backend=os.environ.get("VALKEY_DB_URL", default="redis://localhost:6379/0") + "?ssl_cert_reqs=none",
     )
 
 celery = make_celery()
