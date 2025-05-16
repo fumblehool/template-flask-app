@@ -13,7 +13,7 @@ from api.extensions import (
     db,
     debug_toolbar,
     flask_static_digest,
-    login_manager,
+    # login_manager,
     migrate,
 )
 
@@ -41,7 +41,7 @@ def register_extensions(app):
     cache.init_app(app)
     db.init_app(app)
     csrf_protect.init_app(app)
-    login_manager.init_app(app)
+    # login_manager.init_app(app)
     debug_toolbar.init_app(app)
     migrate.init_app(app, db)
     flask_static_digest.init_app(app)
