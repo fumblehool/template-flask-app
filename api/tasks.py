@@ -14,6 +14,6 @@ celery = make_celery()
 @celery.task(name='create_task')
 def create_task(n):
     print(f"Starting heavy task for {n} seconds...")
-    time.sleep(n)
+    time.sleep(int(n))
     print("Task completed.")
     return f"Completed {n}-second task"
