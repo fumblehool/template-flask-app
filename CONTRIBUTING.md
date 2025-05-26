@@ -59,9 +59,9 @@ To set up the project locally:
 
 We welcome contributions in various forms:
 
-* **Bug Reports**: If you find a bug, please [open an issue](https://github.com/fumblehool/template-flask-app/issues) with detailed information.
+* **Bug Reports**: If you find a bug, please [open an issue](https://github.com/digitalocean/template-flask-app/issues) with detailed information.
 
-* **Feature Requests**: Have an idea for a new feature? [Open an issue](https://github.com/fumblehool/template-flask-app/issues) to discuss it.
+* **Feature Requests**: Have an idea for a new feature? [Open an issue](https://github.com/digitalocean/template-flask-app/issues) to discuss it.
 
 * **Code Contributions**: Ready to write some code? Awesome! Please follow the steps below.
 
