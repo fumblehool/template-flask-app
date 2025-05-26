@@ -23,9 +23,3 @@ spec:
     - key: VALKEY_DB_URL
       value: ${db.DATABASE_URL}
     run_command: celery -A api.tasks.celery worker --loglevel=info
-
-  databases:
-  - name: db
-    engine: VALKEY
-    production: true
-    version: "8"
