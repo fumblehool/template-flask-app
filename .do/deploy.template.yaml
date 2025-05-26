@@ -27,5 +27,4 @@ spec:
   databases:
   - name: db
     engine: VALKEY
-    production: true
     version: "8"
