@@ -4,7 +4,7 @@ spec:
   services:
   - name: api
     environment_slug: python
-    github:
+    git:
       branch: main
       repo_clone_url: https://github.com/digitalocean/template-flask-app.git
     source_dir: /
@@ -15,7 +15,7 @@ spec:
   workers:
   - name: worker
     environment_slug: python
-    github:
+    git:
       branch: main
       repo_clone_url: https://github.com/digitalocean/template-flask-app.git
     source_dir: /
