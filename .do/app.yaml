@@ -9,17 +9,6 @@ services:
     deploy_on_push: true
   source_dir: /
 
-- name: flower
-  environment_slug: python
-  github:
-    repo: digitalocean/template-flask-app
-    branch: main
-    deploy_on_push: true
-  envs:
-  - key: VALKEY_DB_URL
-    value: ${db.DATABASE_URL}
-  run_command: celery -A api.tasks.celery flower --port 8080
-
 workers:
 - name: worker
   environment_slug: python
@@ -35,4 +24,5 @@ workers:
 databases:
 - name: db
   engine: VALKEY
+  production: true
   version: "8"
