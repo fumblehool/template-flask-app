@@ -8,6 +8,9 @@ services:
     branch: main
     deploy_on_push: true
   source_dir: /
+  envs:
+    - key: VALKEY_DB_URL
+      value: ${db.DATABASE_URL}
 
 workers:
 - name: worker

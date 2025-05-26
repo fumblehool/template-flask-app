@@ -4,29 +4,18 @@ spec:
   services:
   - name: api
     environment_slug: python
-    git:
+    github:
       branch: main
       repo_clone_url: https://github.com/digitalocean/template-flask-app.git
     source_dir: /
     envs:
     - key: VALKEY_DB_URL
       value: ${db.DATABASE_URL}
-
-  - name: flower
-    environment_slug: python
-    git:
-      branch: main
-      repo_clone_url: https://github.com/digitalocean/template-flask-app.git
-    source_dir: /
-    envs:
-    - key: VALKEY_DB_URL
-      value: ${db.DATABASE_URL}
-    run_command: celery -A api.tasks.celery flower --port 8080
 
   workers:
   - name: worker
     environment_slug: python
-    git:
+    github:
       branch: main
       repo_clone_url: https://github.com/digitalocean/template-flask-app.git
     source_dir: /
@@ -34,7 +23,9 @@ spec:
     - key: VALKEY_DB_URL
       value: ${db.DATABASE_URL}
     run_command: celery -A api.tasks.celery worker --loglevel=info
+
   databases:
   - name: db
     engine: VALKEY
+    production: true
     version: "8"
