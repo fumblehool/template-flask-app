@@ -22,6 +22,6 @@ DEBUG_TB_INTERCEPT_REDIRECTS = False
 CACHE_TYPE = (
     "flask_caching.backends.RedisCache"
 )
-CACHE_REDIS_URL = env.str("VALKEY_DB_URL")
+CACHE_REDIS_URL = env.str("VALKEY_URL")
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 

@@ -9,8 +9,8 @@ spec:
       repo_clone_url: https://github.com/digitalocean/template-flask-app.git
     source_dir: /
     envs:
-    - key: VALKEY_DB_URL
-      value: ${db.DATABASE_URL}
+    - key: VALKEY_URL
+      value: <REQUIRED>
 
   workers:
   - name: worker
@@ -20,6 +20,6 @@ spec:
       repo_clone_url: https://github.com/digitalocean/template-flask-app.git
     source_dir: /
     envs:
-    - key: VALKEY_DB_URL
-      value: ${db.DATABASE_URL}
+    - key: VALKEY_URL
+      value: <REQUIRED>
     run_command: celery -A api.tasks.celery worker --loglevel=info
